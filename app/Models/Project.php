@@ -16,8 +16,17 @@ class Project extends Model
         'description',
         // 'img_path',
         'LinkGit',
-        'Tecnology'
+        'Tecnology',
+        'Type_id'
 
     ];
     use SoftDeletes;
+
+
+    //aggiungiamo la possibilità di leggere le tabelle a lui collegate
+    //il nostro progetto appartiene ad una sola categoria
+    public function type(){
+        //con qeusto esmpio noi abbiamo collegato il progetto al type
+        return $this->belongsTo(Type::class);            
+    }
 }

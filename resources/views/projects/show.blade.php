@@ -11,9 +11,14 @@
             
             <img src="{{ asset('storage/'. $project->img_path)}}" class="img-fluid w-100 " alt="{{$project->title}}">
         </div>
-        <p class="text-center my-3"><span class="text-uppercase fs-5">Descrizione:</span>{{$project->description}}</p>
+        <p class="text-center my-3"><span class="text-uppercase fw-bolder">Descrizione:</span>{{$project->description}}</p>
+        <span class="text-center my-3 "><span class="text-uppercase  fw-bolder ">Tipo di progetto:</span> {{$project->Type_id}}</span>
+
+        
+
+        
         <span>{{$project->Tecnology}}</span>
-        <span>{{$project->LinkGit}}</span>
+        <span class="text-center my-3"><span class=" text-uppercase fw-bolder ">Link GitHub:</span>{{$project->LinkGit}}</span>
         <div class="col-auto my-5 d-flex  gap-5">
             <a href="{{route('admin.projects.index')}}" type="button" class="btn btn-primary text-uppercase ">torna indietro</a href="">
             <a href="{{route('admin.projects.edit', $project)}}" type="button" class="btn btn-warning text-uppercase ">modifica</a href="">

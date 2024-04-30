@@ -26,6 +26,8 @@ class StoreProjectRequest extends FormRequest
             'title' =>'required|max:80',
             'description' => 'required',
             'image_link' => 'file|max:1024|nullable|mimes:jpg,bmp,png',
+            // facendo cosi noi andiamo a dire che se l'utente prova ad inseirire valori oltre quelli che sono presenti nella tabella non puo
+            'Type_id'=>'nullable|exists:types,id'
         ];
     }
     public function messages()

@@ -55,6 +55,20 @@
                     <input type="text" class="form-control" id="LinkGit" name="LinkGit" value="{{ old('LinkGit') }}" placeholder="Inserisci il link della repo di github">
                 </div>
 
+                <!-- in questa sezione noi stiamo andando a limitare le cose che puo selezionare l'utente tramite la select e facendo come abbiamo fatto qi sotto anche se implementiamo piu tipologie di progetto verranno implementate automaticamente -->
+                <div class="mb-3">
+                    <label for="Type_id" class="form-label text-uppercase ">Tipo di progetto:</label>
+                    <select class=" form-select " name="Type_id" id="Type_id">
+                        
+                        @foreach ($types as $type)
+                        <option value="{{$type->id}}" {{ $type->id == old('Type_id') ? 'selected' : '' }}>{{$type->Tipologia}} </option>
+                        @endforeach
+                    </select>
+                    
+                </div>
+
+                <!-- fine -->
+
                 
                 
                 <button type="submit" class="btn btn-primary">Submit</button>

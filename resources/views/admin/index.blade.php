@@ -10,6 +10,7 @@
     <div class="row justify-content-center my-5">
         <div class="col-auto">
             <a href="{{ route('admin.projects.index') }}" type="button" class="btn btn-primary text-uppercase text-black ">Visita progetti</a>
+            <a href="{{ route('admin.types.index') }}" type="button" class="btn btn-primary text-uppercase text-black ">Visita i tipi di progetto</a>
 
         </div>
     </div>
